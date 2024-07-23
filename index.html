@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Calculator</title>
+    <style>
+        body {
+            background-image: url("abc.jpg");
+            background-size: cover;
+            
+
+        }
+
+        .box {
+            padding: 7px;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: transparent;
+            border: 2px solid black;
+            color: black;
+            
+        }
+
+        .box:hover {
+            box-shadow: 20px 20px 50px rgb(0, 59, 117);
+        }
+        .hd:hover{
+           color: DodgerBlue; 
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Create Calculator With Switch Statement :</h1>
+    <hr>
+    <br><br><br>
+    <div>
+
+        <input class="box" id="num1" onclick="calculate()" placeholder="Enter Number 1" style="margin-left: 30px;">
+        <input class="box" id="num2" onclick="calculate()" placeholder="Enter Number 2" style="margin-left: 40px;">
+        <input class="box" id="operator" onclick="calculate()" placeholder="Enter Operator" style="margin-left: 40px;">
+        <input class="box" id="ans" onclick="calculate()" placeholder="Answer" style="margin-left: 40px;">
+
+    </div>
+
+    <h1 class="hd" style="text-align: center;"><u>Basic Calculator Instructions</u></h1>
+    <br>
+    <div class="info">
+        <h2><u>ADD:</u> </h2>
+        <p style="font-size: 15px;"> If you want to add multiple numbers all you have to do is key in the first number
+            then key in the next number and hit the Add (+) key, and click on click here then you will have your total.
+        </p>
+    </div>
+    <div class="info">
+        <h2><u>SUBTRACT:</u> </h2>
+        <p style="font-size: 15px;"> If you want to subtract multiple numbers all you have to do is key in the first
+            number
+            then key in the next number and hit the subtract (-) key, and click on click here then you will have your total.
+        </p>
+    </div>
+    <div class="info">
+        <h2><u>MULTIPLY</u> </h2>
+        <p style="font-size: 15px;"> If you want to multiply multiple numbers all you have to do is key in the first
+            number
+            then key in the next number and hit the multiply (*) key, and click on click here then you will have your total.
+        </p>
+    </div>
+    <div class="info">
+        <h2><u>DIVIDE:</u> </h2>
+        <p style="font-size: 15px;"> If you want to divide multiple numbers all you have to do is key in the first
+            number
+            then key in the next number and hit the divide (/) key, and click on click here then you will have your total.
+        </p>
+    </div>
+
+    <script>
+
+        function calculate() {
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            let operator = document.getElementById("operator").value;
+
+
+            switch (operator) {
+                case "+":
+                    document.getElementById("ans").value =Number(num1) +Number(num2);
+                    break;
+                case "-":
+                    document.getElementById("ans").value = num1 - num2;
+                    break;
+                case "*":
+                    document.getElementById("ans").value = num1 * num2;
+                    break;
+                case "/":
+                    document.getElementById("ans").value = num1 / num2;
+                    break;
+                default:
+                    document.getElementById("ans").value ="Click Here For Answer";
+                  
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
